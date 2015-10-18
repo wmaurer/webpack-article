@@ -1,3 +1,5 @@
+import './styles.scss';
+
 if (document.querySelectorAll('a').length) {
     require.ensure([], () => {
         const Button = require('./Components/Button');
