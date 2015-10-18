@@ -1,8 +1,16 @@
-// import $ from 'jquery';
-//
-// $('body').html('Hello');
+if (document.querySelectorAll('a').length) {
+    require.ensure([], () => {
+        const Button = require('./Components/Button');
+        const button = new Button('google.com');
 
-import Button from './Components/Button';
+        button.render('a');
+    }, 'button');
+}
 
-const button = new Button('google.com');
-button.render('a');
+if (document.querySelectorAll('h1').length) {
+    require.ensure([], () => {
+        const Header = require('./Components/Header');
+
+        new Header().render('h1');
+    }, 'header');
+}
